@@ -5,8 +5,8 @@ const { default: mongoose } = require('mongoose');
 // const flights = require('./controllers/flightController');
 // const models = require('./models/Flight');
 const flightRoutes = require('./routes/flightRoute');
-const userRoutes = require('./routes/user');
-const adminRoutes = require('./routes/admin');
+const userRoutes = require('./routes/userRoute');
+const adminRoutes = require('./routes/adminRoute');
 
 require('dotenv').config();
 
@@ -19,7 +19,7 @@ const port = process.env.PORT || 3000;
 const uri = process.env.ATLAS_URI;
 
 // setting the root route
-app.use('/', userRoutes);
+app.use('/', flightRoutes);
 
 // configuring server listener
 app.listen(port, () => {

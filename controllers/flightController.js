@@ -34,6 +34,8 @@ exports.fetchid = (req, res) => {
     .catch((err) => res.status(400).json('Error ' + err));
 };
 
+exports.book = (req, res) => {};
+
 // delete flight
 exports.delete = (req, res) => {
   Flight.findByIdAndDelete(req.params.id)
